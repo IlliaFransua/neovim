@@ -4,6 +4,9 @@ return {
 		opts = function(_, opts)
 			opts.sections.lualine_b = { { "branch", icon = "" } }
 			opts.sections.lualine_x = {}
+			opts.sections.lualine_y = {
+				{ "location", padding = { left = 0, right = 1 } },
+			}
 			opts.sections.lualine_z = {}
 		end,
 	},
