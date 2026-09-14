@@ -2,19 +2,16 @@ return {
 	{ "mfussenegger/nvim-jdtls", enabled = false },
 	{
 		"nvim-java/nvim-java",
-		config = false,
-		dependencies = {
-			{
-				"neovim/nvim-lspconfig",
-				opts = {
-					inlay_hints = { enabled = false },
-					servers = { jdtls = {} },
-					setup = {
-						jdtls = function()
-							require("java").setup()
-						end,
-					},
-				},
+		config = function()
+			require("java").setup()
+		end,
+	},
+	{
+		"neovim/nvim-lspconfig",
+		opts = {
+			inlay_hints = { enabled = false },
+			servers = {
+				jdtls = {},
 			},
 		},
 	},
