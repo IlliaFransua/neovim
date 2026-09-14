@@ -17,7 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	spec = {
 		-- base
-		{ "LazyVim/LazyVim", import = "lazyvim.plugins" },
+		{ "LazyVim/LazyVim", import = "lazyvim.plugins", opts = {} },
 
 		-- extras
 		{ import = "lazyvim.plugins.extras.lang.typescript" },
@@ -26,12 +26,17 @@ require("lazy").setup({
 		{ import = "lazyvim.plugins.extras.lang.json" },
 		{ import = "lazyvim.plugins.extras.lang.python" },
 		{ import = "lazyvim.plugins.extras.dap.core" },
+		{ import = "lazyvim.plugins.extras.lang.docker" },
+		{ import = "lazyvim.plugins.extras.lang.rust" },
+		{ import = "lazyvim.plugins.extras.lang.clangd" },
+		{ import = "lazyvim.plugins.extras.coding.luasnip" },
 
 		-- custom
-		{ import = "lazy-vim.lua.disabled-plugins" },
-		{ import = "lazy-vim.lua.plugins" },
-		{ import = "lazy-vim.lua.plugins.langs" },
-		{ import = "lazy-vim.lua.plugins.ui" },
+		{ import = "disabled-plugins" },
+		{ import = "plugins" },
+		{ import = "plugins.langs" },
+		{ import = "plugins.ui" },
+		{ import = "plugins.ui.tree" },
 	},
 	news = { lazyvim = false },
 	defaults = {
@@ -43,7 +48,7 @@ require("lazy").setup({
 		version = false, -- always use the latest git commit
 		-- version = "*", -- try installing the latest stable version for plugins that support semver
 	},
-	install = { colorscheme = { "catppuccin", "habamax" } },
+	-- install = { colorscheme = { "catppuccin-frappe" } },
 	checker = {
 		enabled = true, -- check for plugin updates periodically
 		notify = false, -- notify on update
