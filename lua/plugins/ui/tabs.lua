@@ -3,8 +3,9 @@ return {
 		"akinsho/bufferline.nvim",
 		opts = {
 			options = {
-				offsets = {},
 				mode = "buffers",
+				separator_style = "slant", -- "slant", "slope", "thick", "thin", { "", "" }
+				offsets = {},
 			},
 		},
 	},
