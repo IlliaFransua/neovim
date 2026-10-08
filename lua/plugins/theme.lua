@@ -13,7 +13,10 @@ return {
 			end,
 			set_light_mode = function()
 				vim.o.background = "light"
-				vim.g.everforest_background = "hard"
+				-- vim.g.everforest_background = "hard"
+				-- vim.cmd.colorscheme("everforest")
+				-- vim.o.background = "dark"
+				-- vim.g.everforest_background = "hard"
 				vim.cmd.colorscheme("everforest")
 				-- vim.cmd.colorscheme("catppuccin-latte")
 			end,

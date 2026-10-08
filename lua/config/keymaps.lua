@@ -14,7 +14,9 @@ vim.keymap.set({ "n", "x" }, "s", [["_s]])
 vim.keymap.set({ "n", "x" }, "S", [["_S]])
 vim.keymap.set("x", "d", [["_d]])
 vim.keymap.set("x", "D", [["_D]])
-vim.keymap.set('n', '<leader>az', function() vim.b.autoformat = not vim.b.autoformat end, { desc = "toggle autoformat" })
+vim.keymap.set("n", "<leader>az", function()
+	vim.b.autoformat = not vim.b.autoformat
+end, { desc = "toggle autoformat" })
 
 vim.keymap.set("n", "<leader>cy", function()
 	local d = vim.diagnostic.get(0, { lnum = vim.fn.line(".") - 1 })[1]
@@ -22,3 +24,5 @@ vim.keymap.set("n", "<leader>cy", function()
 		vim.fn.setreg("+", d.message)
 	end
 end, { desc = "Yank diagnostic" })
+
+vim.api.nvim_set_keymap('n', '<F2>', ':CFormat42<CR>', { noremap = true, silent = true })

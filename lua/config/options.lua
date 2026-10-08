@@ -4,7 +4,7 @@
 
 vim.o.winborder = "rounded"
 
-vim.g.autoformat = true
+vim.g.autoformat = false
 
 if vim.g.neovide then
 	-- Set the GUI font (size 20, no hinting to avoid bold look)
