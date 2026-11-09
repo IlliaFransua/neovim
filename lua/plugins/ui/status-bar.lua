@@ -9,7 +9,7 @@ return {
 			opts.sections.lualine_a = {
 				{
 					function()
-						return "✨Bestie"
+						return "🎄☃️✨🎁Bestie"
 					end,
 					separator = { left = "\u{e0b6}", right = "\u{e0b4}" },
 				},
