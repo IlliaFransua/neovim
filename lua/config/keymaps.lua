@@ -27,3 +27,5 @@ end, { desc = "Yank diagnostic" })
 
 vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "Go to Definition" })
 vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, { desc = "Go to Declaration" })
+
+vim.keymap.set({ "v", "x" }, "<C-c>", '"+y', { noremap = true, silent = true, desc = "Yank to clipboard" })

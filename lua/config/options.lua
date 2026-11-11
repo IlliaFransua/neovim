@@ -6,6 +6,9 @@ vim.o.winborder = "rounded"
 
 vim.g.autoformat = true
 
+vim.opt.clipboard = "unnamedplus"
+
+-- WARN: not tested
 if vim.g.neovide then
 	-- Set the GUI font (size 20, no hinting to avoid bold look)
 	vim.o.guifont = "Hack Nerd Font:h20:#h-none"
