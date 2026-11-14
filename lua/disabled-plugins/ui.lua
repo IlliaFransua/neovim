@@ -10,6 +10,7 @@ return {
 		opts = {
 			notifier = { enabled = false },
 			explorer = { enabled = false },
+			scroll = { enabled = false },
 		},
 	},
 }
